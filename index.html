@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sri Maruthi Kitchen | Cloud Kitchen & Catering - Kengeri, Bangalore</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Sri Maruthi Kitchen - Cloud kitchen & catering service in Kengeri, Bangalore. Hygienic vegetarian and non-vegetarian food for all occasions. Call or WhatsApp +91 99450 75824." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #070713;
+      --bg-soft: #111827;
+      --bg-softer: #020617;
+      --accent: #f97316;
+      --accent-soft: rgba(249, 115, 22, 0.15);
+      --accent-strong: #ea580c;
+      --text-main: #e5e7eb;
+      --text-muted: #9ca3af;
+      --border-soft: rgba(148, 163, 184, 0.35);
+      --shadow-soft: 0 18px 45px rgba(15, 23, 42, 0.55);
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-pill: 999px;
+      --transition-fast: 0.18s ease-out;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 48%, #000 100%);
+      color: var(--text-main);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .page {
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+    }
+
+    /* Header & Nav */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(14px);
+      background: linear-gradient(to bottom, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.75), transparent);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 0;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .brand-logo {
+      width: 42px;
+      height: 42px;
+      border-radius: 14px;
+      background: radial-gradient(circle at 15% 15%, #fed7aa 0, #f97316 35%, #b91c1c 90%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 30px rgba(248, 113, 22, 0.65);
+      font-weight: 700;
+      color: #0b1120;
+      letter-spacing: 0.08em;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+    }
+
+    .brand-text-main {
+      font-family: "Poppins", system-ui, sans-serif;
+      font-weight: 600;
+      font-size: 1.1rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .brand-text-sub {
+      font-size: 0.73rem;
+      color: var(--text-muted);
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.3rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      padding-bottom: 0.1rem;
+      border-bottom: 1px solid transparent;
+      transition: color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .nav-links a:hover {
+      color: #fef3c7;
+      border-color: rgba(248, 250, 252, 0.35);
+      transform: translateY(-1px);
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pill-badge {
+      border-radius: var(--radius-pill);
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      padding: 0.25rem 0.75rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: radial-gradient(circle at top left, rgba(248, 250, 252, 0.08), rgba(15, 23, 42, 0.8));
+    }
+
+    .pill-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #22c55e;
+      box-shadow: 0 0 8px rgba(16, 185, 129, 0.9);
+    }
+
+    .btn {
+      border-radius: var(--radius-pill);
+      padding: 0.4rem 1rem;
+      border: 1px solid transparent;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+      transition: background var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: #0b1120;
+      box-shadow: 0 10px 30px rgba(248, 113, 22, 0.7);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 14px 40px rgba(248, 113, 22, 0.9);
+    }
+
+    .btn-outline {
+      border-color: rgba(148, 163, 184, 0.7);
+      color: var(--text-main);
+      background: rgba(15, 23, 42, 0.7);
+    }
+
+    .btn-outline:hover {
+      border-color: rgba(249, 250, 251, 0.6);
+      background: rgba(15, 23, 42, 0.9);
+      transform: translateY(-1px);
+    }
+
+    .icon {
+      font-size: 1rem;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 3.2rem 0 3rem;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .hero-pre {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.75rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-pill);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .hero-pre span {
+      font-size: 0.7rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(34, 197, 94, 0.18);
+      color: #bbf7d0;
+    }
+
+    .hero-title {
+      font-family: "Poppins", system-ui, sans-serif;
+      font-size: clamp(2.2rem, 4vw, 3rem);
+      line-height: 1.08;
+      margin: 0 0 0.75rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-title span {
+      background: linear-gradient(to right, #fed7aa, #f97316, #facc15);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 0.97rem;
+      color: var(--text-muted);
+      max-width: 34rem;
+      line-height: 1.6;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .hero-meta-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(249, 115, 22, 0.95);
+      box-shadow: 0 0 10px rgba(248, 113, 22, 0.9);
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-note {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .hero-note span {
+      font-size: 1rem;
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top left, rgba(248, 250, 252, 0.09), rgba(15, 23, 42, 0.94));
+      border-radius: var(--radius-xl);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 1.2rem 1.35rem;
+      box-shadow: var(--shadow-soft);
+      display: grid;
+      grid-template-rows: auto auto;
+      gap: 1rem;
+    }
+
+    .hero-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .tag {
+      padding: 0.2rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.7);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      white-space: nowrap;
+    }
+
+    .hero-menu-card {
+      border-radius: var(--radius-lg);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      padding: 0.9rem 1rem;
+      font-size: 0.8rem;
+    }
+
+    .hero-menu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-menu-title {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .hero-menu-pill {
+      font-size: 0.7rem;
+      border-radius: 999px;
+      padding: 0.1rem 0.5rem;
+      background: rgba(248, 250, 252, 0.08);
+      color: var(--text-muted);
+    }
+
+    .hero-menu-items {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.35rem 1.25rem;
+    }
+
+    .hero-menu-item-label {
+      color: var(--text-muted);
+    }
+
+    .hero-menu-item-price {
+      font-weight: 500;
+      text-align: right;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* Sections common */
+    section {
+      padding: 2.3rem 0 2.5rem;
+    }
+
+    .section-header {
+      margin-bottom: 1.6rem;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: var(--accent);
+      letter-spacing: 0.19em;
+      margin-bottom: 0.3rem;
+    }
+
+    .section-title {
+      font-family: "Poppins", system-ui, sans-serif;
+      font-size: 1.4rem;
+      margin: 0 0 0.4rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 32rem;
+    }
+
+    /* About */
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 1.8rem;
+      align-items: start;
+    }
+
+    .about-text {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .about-text p {
+      margin: 0 0 0.9rem;
+    }
+
+    .about-highlight {
+      padding: 0.9rem 1rem;
+      border-radius: var(--radius-lg);
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px dashed rgba(148, 163, 184, 0.5);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .about-grid-cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem;
+    }
+
+    .stat-card {
+      border-radius: var(--radius-lg);
+      padding: 0.8rem 0.9rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 0.8rem;
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      margin-bottom: 0.2rem;
+    }
+
+    .stat-value {
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* Menu section */
+    .menu-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 1.9rem;
+      align-items: start;
+    }
+
+    .menu-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .menu-card {
+      border-radius: var(--radius-lg);
+      padding: 1rem 1rem 0.9rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: radial-gradient(circle at top, rgba(248, 250, 252, 0.06), rgba(15, 23, 42, 0.95));
+      box-shadow: var(--shadow-soft);
+      font-size: 0.85rem;
+    }
+
+    .menu-card-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 0.6rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .menu-card-title {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    .menu-card-tag {
+      font-size: 0.7rem;
+      padding: 0.1rem 0.5rem;
+      border-radius: 999px;
+      background: rgba(248, 250, 252, 0.08);
+      color: var(--text-muted);
+    }
+
+    .menu-list {
+      list-style: none;
+      margin: 0.4rem 0 0.3rem;
+      padding: 0;
+    }
+
+    .menu-item-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.4rem;
+      align-items: baseline;
+      padding: 0.12rem 0;
+      border-bottom: 1px dashed rgba(51, 65, 85, 0.7);
+    }
+
+    .menu-item-row:last-child {
+      border-bottom: none;
+    }
+
+    .menu-item-name {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .menu-price {
+      font-size: 0.84rem;
+      font-weight: 500;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .menu-note {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      margin-top: 0.45rem;
+    }
+
+    .menu-side {
+      border-radius: var(--radius-lg);
+      padding: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: rgba(15, 23, 42, 0.9);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .menu-side h4 {
+      margin: 0 0 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .menu-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-top: 0.4rem;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .service-card {
+      border-radius: var(--radius-lg);
+      padding: 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      background: rgba(15, 23, 42, 0.95);
+      font-size: 0.84rem;
+      color: var(--text-muted);
+    }
+
+    .service-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-bottom: 0.35rem;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+      gap: 1.6rem;
+      align-items: start;
+    }
+
+    .contact-card {
+      border-radius: var(--radius-xl);
+      padding: 1.25rem 1.3rem;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      background: radial-gradient(circle at top left, rgba(248, 250, 252, 0.08), rgba(15, 23, 42, 0.96));
+      box-shadow: var(--shadow-soft);
+      font-size: 0.88rem;
+    }
+
+    .contact-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.15rem;
+    }
+
+    .contact-value {
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 0.4rem;
+    }
+
+    .contact-info-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin-top: 0.6rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .contact-info-item span {
+      display: block;
+    }
+
+    .service-area {
+      border-radius: var(--radius-lg);
+      padding: 1rem;
+      border: 1px dashed rgba(148, 163, 184, 0.6);
+      background: rgba(15, 23, 42, 0.95);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* Sticky WhatsApp */
+    .whatsapp-fab {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      z-index: 60;
+    }
+
+    .whatsapp-fab a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      border-radius: 999px;
+      background: #22c55e;
+      color: #022c22;
+      box-shadow: 0 14px 34px rgba(16, 185, 129, 0.8);
+      font-size: 1.45rem;
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .whatsapp-fab a:hover {
+      transform: translateY(-2px) scale(1.02);
+      box-shadow: 0 18px 40px rgba(16, 185, 129, 0.95);
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(31, 41, 55, 0.9);
+      padding: 1rem 0 1.3rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-grid,
+      .menu-layout,
+      .services-grid,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .menu-columns {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 2.2rem;
+      }
+
+      .hero-card {
+        order: -1;
+      }
+
+      .services-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .footer-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        padding-bottom: 0.6rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-menu-items {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="container">
+        <nav class="nav">
+          <div class="brand">
+            <div class="brand-logo">SM</div>
+            <div>
+              <div class="brand-text-main">Sri Maruthi Kitchen</div>
+              <div class="brand-text-sub">Cloud Kitchen · Catering</div>
+            </div>
+          </div>
+          <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#services">Occasions</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="nav-cta">
+            <div class="pill-badge">
+              <span class="pill-dot"></span>
+              Taking Orders Today
+            </div>
+            <a class="btn btn-outline" href="tel:+919945075824">
+              <span class="icon">📞</span> Call
+            </a>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="top">
+        <div class="container">
+          <div class="hero-grid">
+            <div>
+              <div class="hero-pre">
+                <span>New</span> Branch Name: Sri Maruthi Kitchen · Kengeri, Bangalore
+              </div>
+              <h1 class="hero-title">
+                Cloud Kitchen & Catering<br />
+                for <span>Every Occasion</span>.
+              </h1>
+              <p class="hero-subtitle">
+                Good quality and hygienic food for every occasion. At Maruthi Catering, we believe great food brings people together.
+                We prepare fresh, homely dishes for birthdays, engagements, family functions, marriages, office events, and daily meals.
+              </p>
+              <div class="hero-meta">
+                <div class="hero-meta-item">
+                  <span class="hero-meta-dot"></span> Home-style taste, cloud kitchen convenience
+                </div>
+                <div class="hero-meta-item">
+                  <span class="hero-meta-dot"></span> Veg & Non-Veg group orders
+                </div>
+                <div class="hero-meta-item">
+                  <span class="hero-meta-dot"></span> Free delivery within 15 km*
+                </div>
+              </div>
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="https://wa.me/919945075824" target="_blank" rel="noopener">
+                  <span class="icon">🟢</span> WhatsApp Order
+                </a>
+                <a class="btn btn-outline" href="#menu">
+                  View Today’s Menu
+                </a>
+              </div>
+              <div class="hero-note">
+                <span>👨‍🍳</span> Owned & managed by <strong>&nbsp;Ananth Kumar P</strong>
+              </div>
+            </div>
+
+            <div class="hero-card">
+              <div class="hero-card-tags">
+                <span class="tag">🍽️ Breakfast · Meals</span>
+                <span class="tag">🎉 Events & Functions</span>
+                <span class="tag">🚚 Parcel-Friendly</span>
+              </div>
+              <div class="hero-menu-card">
+                <div class="hero-menu-header">
+                  <div class="hero-menu-title">Popular Combos</div>
+                  <div class="hero-menu-pill">Per person</div>
+                </div>
+                <div class="hero-menu-items">
+                  <div class="hero-menu-item-label">Vegetarian Meals</div>
+                  <div class="hero-menu-item-price">₹125</div>
+                  <div class="hero-menu-item-label">Chicken Meals</div>
+                  <div class="hero-menu-item-price">₹250</div>
+                  <div class="hero-menu-item-label">Mutton Meals</div>
+                  <div class="hero-menu-item-price">₹400</div>
+                  <div class="hero-menu-item-label">Group Breakfast (50–150)</div>
+                  <div class="hero-menu-item-price">Custom</div>
+                </div>
+                <div class="menu-note">
+                  Minimum members apply for group Tiffin/Breakfast orders. All items are served in parcel-friendly vessels with free delivery within 15 km of Bengaluru.* :contentReference[oaicite:0]{index=0}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">About Us</div>
+            <h2 class="section-title">Sri Maruthi Kitchen · Maruthi Catering</h2>
+            <p class="section-subtitle">
+              A neighborhood cloud kitchen near Kengeri, bringing hygienic, homely food to your doorstep for both daily meals and special occasions.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div>
+              <div class="about-text">
+                <p>
+                  At Maruthi Catering, we believe great food brings people together. Every dish is prepared in a clean, well-maintained
+                  kitchen using quality ingredients and home-style recipes, balanced with the convenience and efficiency of a modern cloud kitchen.
+                </p>
+                <p>
+                  Whether it is a birthday, engagement, family function, marriage, office event, or regular lunch & dinner, we handle the
+                  food so you can focus on your guests. We specialise in both vegetarian and non-vegetarian menus tailored for group orders.
+                </p>
+              </div>
+              <div class="about-highlight">
+                <strong>Our Promise:</strong> Good quality and hygienic food for every occasion — delivered hot, neatly packed, and on time.
+                Contact us directly via WhatsApp or phone call for bookings and custom menus.
+              </div>
+            </div>
+            <div class="about-grid-cards">
+              <div class="stat-card">
+                <div class="stat-label">Owner</div>
+                <div class="stat-value">Ananth Kumar P</div>
+                <div class="stat-label" style="margin-top:0.35rem;">Branch Name</div>
+                <div class="stat-value">Sri Maruthi Kitchen</div>
+              </div>
+              <div class="stat-card">
+                <div class="stat-label">Primary Service</div>
+                <div class="stat-value">Cloud Kitchen & Outdoor Catering</div>
+                <div class="stat-label" style="margin-top:0.35rem;">Location</div>
+                <div class="stat-value">Near Kengeri, Bengaluru</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Menu -->
+      <section id="menu">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Menu</div>
+            <h2 class="section-title">Signature Group Menus</h2>
+            <p class="section-subtitle">
+              Ideal for 50–150 members and more. Perfect for home functions, office gatherings, and community events.
+            </p>
+          </div>
+
+          <div class="menu-layout">
+            <div class="menu-columns">
+              <!-- Veg Menu -->
+              <div class="menu-card">
+                <div class="menu-card-header">
+                  <div>
+                    <div class="menu-card-title">Vegetarian Breakfast / Tiffin</div>
+                    <div class="menu-note" style="margin-top:0.15rem;">
+                      Minimum 50–150 members (only Tiffin / Breakfast group orders). :contentReference[oaicite:1]{index=1}
+                    </div>
+                  </div>
+                  <span class="menu-card-tag">Custom pricing</span>
+                </div>
+                <ul class="menu-list">
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Idly with Chutney & Sambar</span>
+                    <span class="menu-price">–</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Pongal with Chutney</span>
+                    <span class="menu-price">–</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Pulao with Chutney or Raitha</span>
+                    <span class="menu-price">–</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Poori with Sagu & Bhaji</span>
+                    <span class="menu-price">–</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Bisi Bele Bath with Kharra Boondi / Mixture</span>
+                    <span class="menu-price">–</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Upma with Chutney</span>
+                    <span class="menu-price">–</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Curd Rice</span>
+                    <span class="menu-price">–</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="menu-card">
+                <div class="menu-card-header">
+                  <div>
+                    <div class="menu-card-title">Vegetarian Meals</div>
+                    <div class="menu-note" style="margin-top:0.15rem;">
+                      Full South Indian vegetarian meal served in parcel-friendly vessels. :contentReference[oaicite:2]{index=2}
+                    </div>
+                  </div>
+                  <span class="menu-card-tag">From ₹125 / person</span>
+                </div>
+                <ul class="menu-list">
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Chapathi / Poori</span>
+                    <span class="menu-price">₹125</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Veg Sagu</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Veg Subji</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Lemon Rice / Pulihora / Colour Rice (any one)</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">White Rice with Sambar & Rasam</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Curd, Papad, Pickle & Salt</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Sweet</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Chicken Meals -->
+              <div class="menu-card">
+                <div class="menu-card-header">
+                  <div>
+                    <div class="menu-card-title">Chicken Meals</div>
+                    <div class="menu-note" style="margin-top:0.15rem;">
+                      Nati style chicken biryani meals with accompaniments and water bottle. :contentReference[oaicite:3]{index=3}
+                    </div>
+                  </div>
+                  <span class="menu-card-tag">₹250 / person</span>
+                </div>
+                <ul class="menu-list">
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Pepper Salt</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Egg</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Chicken Fries (Onion / Special Red / Chilli)</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Chicken Dry (Kabab / Pepper)</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Chicken Biryani (Nati Style) with Plain Chicken Gravy</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">White Rice with Chicken Gravy</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Rasam, Cucumber & Onion</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Water Bottle</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                </ul>
+                <div class="menu-note">
+                  Biryani container: 500 ml per person. :contentReference[oaicite:4]{index=4}
+                </div>
+              </div>
+
+              <!-- Mutton Meals -->
+              <div class="menu-card">
+                <div class="menu-card-header">
+                  <div>
+                    <div class="menu-card-title">Mutton Meals</div>
+                    <div class="menu-note" style="margin-top:0.15rem;">
+                      Nati style mutton biryani meals with fry, gravy and water bottle. :contentReference[oaicite:5]{index=5}
+                    </div>
+                  </div>
+                  <span class="menu-card-tag">₹400 / person</span>
+                </div>
+                <ul class="menu-list">
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Pepper Salt</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Egg</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Mutton Biryani (Nati Style) with Mutton Curry & Raitha</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Mutton Fry</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">White Rice with Plain Mutton Gravy</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Rasam, Cucumber & Onion</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                  <li class="menu-item-row">
+                    <span class="menu-item-name">Water Bottle</span>
+                    <span class="menu-price">Included</span>
+                  </li>
+                </ul>
+                <div class="menu-note">
+                  Biryani container: 500 ml per person. :contentReference[oaicite:6]{index=6}
+                </div>
+              </div>
+            </div>
+
+            <aside class="menu-side">
+              <h4>Booking & Delivery</h4>
+              <p>
+                All items are served in parcel-friendly steel vessels and containers for easy serving at your venue.
+                Free delivery is provided within a 15 km radius in Bengaluru. Beyond that, delivery charges will apply. :contentReference[oaicite:7]{index=7}
+              </p>
+              <p style="margin-top:0.6rem;">
+                For customised menus, per-plate pricing, or bulk corporate orders, please call or WhatsApp:
+                <br /><strong>+91 99450 75824</strong>
+              </p>
+              <div class="menu-tags">
+                <span class="tag">Birthday Functions</span>
+                <span class="tag">Housewarming</span>
+                <span class="tag">Marriages</span>
+                <span class="tag">Office Events</span>
+                <span class="tag">Daily Meals</span>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services / Occasions -->
+      <section id="services">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Occasions</div>
+            <h2 class="section-title">Food for Every Kind of Gathering</h2>
+            <p class="section-subtitle">
+              From intimate family functions to larger celebrations and office gatherings, Sri Maruthi Kitchen has you covered.
+            </p>
+          </div>
+
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-title">Family & Social Functions</div>
+              <p>
+                Birthdays, naming ceremonies, engagements, anniversaries and get-togethers – we provide complete vegetarian and non-vegetarian
+                menus designed for home serving and community halls.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-title">Marriages & Large Events</div>
+              <p>
+                Group meals with consistent quality and hygienic preparation. We help you plan the menu according to guest count, time of
+                service, and traditional preferences.
+              </p>
+            </div>
+            <div class="service-card">
+              <div class="service-title">Office & Daily Meals</div>
+              <p>
+                Regular lunch and dinner packs for offices near Kengeri and surrounding areas, with options for vegetarian and non-vegetarian
+                meals on rotation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="container">
+          <div class="section-header">
+            <div class="section-kicker">Contact</div>
+            <h2 class="section-title">Call or WhatsApp to Place Your Order</h2>
+            <p class="section-subtitle">
+              Direct communication, no third-party app fees. Share your date, time, location, and approximate headcount – we will suggest the best menu.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <div class="contact-label">Phone / WhatsApp</div>
+              <div class="contact-value">+91 99450 75824</div>
+
+              <div class="contact-actions">
+                <a class="btn btn-primary" href="https://wa.me/919945075824" target="_blank" rel="noopener">
+                  <span class="icon">🟢</span> Chat on WhatsApp
+                </a>
+                <a class="btn btn-outline" href="tel:+919945075824">
+                  <span class="icon">📞</span> Call Now
+                </a>
+              </div>
+
+              <div class="contact-info-grid">
+                <div class="contact-info-item">
+                  <span>Owner</span>
+                  <strong>Ananth Kumar P</strong>
+                </div>
+                <div class="contact-info-item">
+                  <span>Kitchen</span>
+                  <strong>Sri Maruthi Kitchen</strong>
+                </div>
+                <div class="contact-info-item">
+                  <span>Mode</span>
+                  <strong>Cloud Kitchen · Outdoor Catering</strong>
+                </div>
+                <div class="contact-info-item">
+                  <span>Preferred Contact</span>
+                  <strong>WhatsApp or Phone Call</strong>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-area">
+              <strong>Service Area – Near Kengeri, Bengaluru</strong>
+              <p style="margin-top:0.4rem;">
+                We primarily serve <strong>Kengeri</strong> and nearby areas in and around West Bengaluru within approximately a 15 km radius.
+                If you’re not sure whether your location is covered, simply send a WhatsApp message with your event address and date.
+              </p>
+              <p style="margin-top:0.4rem;">
+                <em>Contact through WhatsApp or phone call for enquiries, quotations, and bookings.</em>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-row">
+          <div>
+            © <span id="year"></span> Sri Maruthi Kitchen · Maruthi Catering. All rights reserved.
+          </div>
+          <div>
+            Cloud Kitchen & Catering · Kengeri, Bengaluru · Phone / WhatsApp: <a href="tel:+919945075824">+91 99450 75824</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <div class="whatsapp-fab">
+    <a href="https://wa.me/919945075824" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      💬
+    </a>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
